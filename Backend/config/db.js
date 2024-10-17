@@ -1,9 +1,9 @@
 const sql = require('mssql');
 
-// Configuración de la conexión a SQL Server (usando variables de entorno)
+// Configuración de la conexión a SQL Server
 const sqlConfig = {
     user: process.env.DB_USER || 'sa', 
-    password: process.env.DB_PASSWORD || '123', // ¡No recomendado en producción!
+    password: process.env.DB_PASSWORD || '123', 
     database: process.env.DB_NAME || 'LoginPP',
     server: process.env.DB_SERVER || 'ADMIN_CYBER\\FACTURACION',
     options: {
@@ -21,7 +21,6 @@ const poolPromise = new sql.ConnectionPool(sqlConfig)
     })
     .catch(err => {
         console.error('Error al conectar a SQL Server:', err);
-        // Aquí puedes agregar un manejo de errores más robusto
     });
 
 module.exports = {

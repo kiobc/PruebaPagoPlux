@@ -1,23 +1,23 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';  // Importa FormsModule
-import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';  // Importar withFetch
-import { AppRoutingModule } from './app-routing.module';  // Asegúrate de que esté bien importado
+import { FormsModule } from '@angular/forms'; 
+import { HttpClientModule } from '@angular/common/http';  
+import { AppRoutingModule } from './app-routing.module';  
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { PagoPluxComponent } from './pago-plux/pago-plux.component';
-import { PagoPluxService } from './pagoplux.service';  // Asegúrate de que esté bien importado
+import { PagoPluxService } from './pagoplux.service';  
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PagoPluxComponent,// Asegúrate de que esté bien importado aquí
+    PagoPluxComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule,  // Asegúrate de que FormsModule está importado aquí
+    FormsModule,  
     HttpClientModule,
     AppRoutingModule
   ],

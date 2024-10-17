@@ -1,4 +1,3 @@
-// /server.js
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -8,11 +7,9 @@ const paymentRoutes = require('./routes/payment');
 const app = express();
 const PORT = 8080;
 
-// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-// Rutas
 app.use('/api/auth', authRoutes);
 app.use('/api/payment', paymentRoutes);
 

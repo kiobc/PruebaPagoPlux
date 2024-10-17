@@ -1,7 +1,6 @@
-// controllers/paymentController.js
-const axios = require('axios');  // Librería para hacer solicitudes HTTP
 
-// Función para crear el link de pago
+const axios = require('axios'); 
+
 const createPaymentLink = async (req, res) => {
     const { montoCero, monto12, whatsapp, descripcion, ci, direccion, nombrePago, emailPago, telefono } = req.body;
 
@@ -32,7 +31,6 @@ const createPaymentLink = async (req, res) => {
     }
 };
 
-// Función para consultar el estado de la transacción
 const checkTransactionStatus = async (req, res) => {
     const { transactionId } = req.params;
 

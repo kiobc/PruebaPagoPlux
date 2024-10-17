@@ -1,7 +1,3 @@
-<button (click)="generatePaymentLink()">Generar Link de Pago</button>
-<button (click)="initializePayment()">Pagar con PagoPlux</button>
-<button (click)="checkTransactionState()">Verificar Estado de Transacción</button>
+<div id="ButtonPaybox">Pagar Ahora</div>  
 
-<div *ngIf="paymentLink">
-  <p>Link de pago generado: <a [href]="paymentLink" target="_blank">{{paymentLink}}</a></p>
-</div>
+<button (click)="createTransaction()">Generar Link de Pago</button>

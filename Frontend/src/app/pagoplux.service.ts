@@ -9,7 +9,7 @@ declare var Paybox: any;
   providedIn: 'root'
 })
 export class PagoPluxService {
-  private apiUrl = 'https://api.pagoplux.com/intv1/'; // Cambia a 'https://apipre.pagoplux.com/intv1/' para sandbox
+  private apiUrl = 'https://api.pagoplux.com/intv1/'; 
   private credentials = `${environment.pagopluxIdCliente}:${environment.pagopluxClaveSecreta}`;
 
   constructor(private http: HttpClient) {}
@@ -49,7 +49,7 @@ export class PagoPluxService {
         Paybox.init({
           payboxApiKey: environment.pagopluxIdCliente,
           payboxSecret: environment.pagopluxClaveSecreta,
-          payboxEnvironment: 'TEST', // Cambia a 'LIVE' para producción
+          payboxEnvironment: 'TEST', 
           payboxIdClient: environment.pagopluxIdCliente,
           ...paymentData
         });
@@ -73,12 +73,8 @@ export class PagoPluxService {
     });
   }
 
-  // Método para cifrar datos sensibles usando la clave pública
   encryptData(data: string): string {
-    // Aquí deberías implementar la lógica de cifrado usando la clave pública
-    // Por ejemplo, podrías usar la librería JSEncrypt
-    // Esta es una implementación ficticia, deberás reemplazarla con la real
     console.warn('Método de cifrado no implementado');
-    return btoa(data); // Esto es solo un placeholder, no es un cifrado real
+    return btoa(data); 
   }
 }
